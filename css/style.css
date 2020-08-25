@@ -1,0 +1,188 @@
+/*
+ * --- GLOBAL STYLES ---
+ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* makes sure that the padding and border are included in the total width and height of the elements. */
+  box-sizing: border-box;
+
+  font-family: "Optima", "lato", sans-serif;
+  font-size: 62.5%;
+
+  background-color: #1f1949;
+}
+
+.grid {
+  display: grid;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 2px solid #b5b7bb;
+}
+
+
+h3 {
+  font-size: 2.4em;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-bottom: 1em;
+}
+
+/*
+ * --- Header STYLES ---
+ */
+header {
+  /* font-family: "Playfair Display"; */
+  font-size: 3em;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+
+  color: #f7f0ff;
+  margin: 1.2em;
+}
+
+header i {
+  display: flex;
+  justify-self: center;
+}
+
+header p {
+  margin-top: 1.2em;
+
+  line-height: 1.5;
+  /* letter-spacing: 0.01em; */
+  text-align: center;
+}
+
+/*
+ * --- NAV BAR STYLES ---
+ */
+#navbar {
+  overflow: hidden;
+  background: #1f1949;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav.grid {
+  grid-template-columns: 1fr auto;
+  text-align: center;
+
+  margin: 1.5em;
+  color: #fffff0;
+}
+
+/*
+ * --- CONTENT STYLES ---
+ */
+.content {
+  padding: 0 2em;
+
+  grid-template-columns: auto 1fr;
+  color: white;
+}
+
+.timeline {
+  height: 1600px;
+  border-left: 1px solid #b5b7bb;
+}
+
+/*
+ * --- CONTACT FORM STYLES ---
+ */
+.contact-form {
+  margin: 3em 2em;
+  text-align: center;
+
+  color: #FFFFF0;
+}
+
+.contact-form a,
+.contact-form a.email,
+.contact-form a p,
+.contact-form p.phone{
+  color: #FFFFF0;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.contact-form a{
+  /* display: flex; */
+  text-decoration: none;
+  /* margin-right: 1em; */
+}
+
+
+/*
+ * ─── MOBILE NAV STYLES ─────────────────────────────────────────────────────────────────
+ */
+@media screen and (max-width: 375px) {
+  header {
+    height: 610px;
+  }
+
+  nav img {
+    max-width: 15em;
+    margin-bottom: 1em;
+  }
+
+  #title {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  nav a.toggle.open {
+    justify-self: end;
+    margin: 0.5em 0.5em 0 0;
+
+    font-size: 2.5em;
+    color: #ff6666;
+  }
+}
+
+/*
+ * ─── 425PX AND UP STYLES ────────────────────────────────────────────────────────
+ */
+@media screen and (min-width: 426px) {
+}
+
+/*
+ * ─── 768PX AND UP STYLES ────────────────────────────────────────────────────────
+ */
+@media screen and (min-width: 768px) {
+  nav img {
+    max-width: 25em;
+    justify-self: left;
+  }
+
+  nav.grid .grid {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*
+ * ─── 1024PX AND UP STYLES ────────────────────────────────────────────────────────
+ */
+@media screen and (min-width: 1024px) {
+}
+
+/*
+ * ─── 1440PX AND UP STYLES ────────────────────────────────────────────────────────
+ */
+@media screen and (min-width: 1440px) {
+}

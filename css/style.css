@@ -110,7 +110,7 @@ nav.grid {
 }
 
 /*
- * --- CONTENT STYLES ---
+ * --- RESUME CONTENT STYLES ---
  */
 .content {
   padding: 0 2em;
@@ -123,6 +123,13 @@ nav.grid {
   height: 1600px;
   border-left: 1px solid #b5b7bb;
 }
+
+.resume {
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 3fr;
+}
+
+
 
 /*
  * --- CONTACT FORM STYLES ---

@@ -49,7 +49,7 @@ $(function () {
 
         $item.find('svg').drawsvg().drawsvg('animate');
 
-        setTimeout(myFunction, 10000);
+        setTimeout(myFunction, 15000);
 
         function myFunction() {
             $item.removeClass('active');

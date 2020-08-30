@@ -14,6 +14,9 @@ $(function () {
     //     ctx.stroke();
     // }
 
+    let $container=$('.container');
+    $container.addClass('inactive');
+
     new TypeIt("#quotes", {
         speed: 100,
         waitUntilVisible: true,
@@ -41,7 +44,7 @@ $(function () {
 
     function drawLogo() {
         let $info = $('.info');
-        $info.addClass('inactive');
+        $info.addClass('dim');
 
         let $intro = $('.intro'),
             $item = $intro.find('.item');
@@ -53,8 +56,11 @@ $(function () {
 
         function myFunction() {
             $item.removeClass('active');
-            $info.removeClass('inactive');
+
+            $info.removeClass('dim');
             $info.addClass('active');
+
+            $container.removeClass('inactive');
         }
     }
 

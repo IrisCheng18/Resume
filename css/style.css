@@ -33,12 +33,24 @@ h3 {
   letter-spacing: 0.1em;
 }
 
+.container {
+  opacity: 1;
+}
+
+.container.inactive {
+  opacity: 0;
+}
+
 .active {
   opacity: 1;
 }
 
-.inactive {
+.dim {
   opacity: 0.1;
+}
+
+.inactive {
+  opacity: 0;
 }
 
 /*
@@ -80,7 +92,6 @@ header .item svg {
 
 header .item {
   opacity: 0;
-
 }
 
 header .item.active {
@@ -129,8 +140,6 @@ nav.grid {
   grid-template-columns: 1fr 3fr;
 }
 
-
-
 /*
  * --- CONTACT FORM STYLES ---
  */
@@ -147,7 +156,6 @@ nav.grid {
 #contact-form a {
   color: #fffff0;
   text-decoration: none;
-  
 }
 
 #contact-form a,

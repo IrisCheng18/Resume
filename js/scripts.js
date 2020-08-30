@@ -14,6 +14,51 @@ $(function () {
     //     ctx.stroke();
     // }
 
+    new TypeIt("#quotes", {
+        speed: 100,
+        waitUntilVisible: true,
+        loop: false,
+        afterComplete: function () {
+            console.log("DONE!");
+        }
+    })
+        .type("There is no difference between science and art when it comes to ", { delay: 2000 })
+        .break({ delay: 2000 })
+        .type("creativeness,", { delay: 2000 })
+        // .options({ speed: 500, delay: 2000 })
+        .type(" productiveness,", { delay: 2000 })
+        .type(" to conclusions", { delay: 2000 })
+        .type(" and to formulations.", { delay: 2000 })
+        .exec(
+            function () {
+                console.log("fire!");
+            },
+            { delay: 2000 }
+        )
+        .go();
+
+    setTimeout(drawLogo, 25000);
+
+    function drawLogo() {
+        let $info = $('.info');
+        $info.addClass('inactive');
+
+        let $intro = $('.intro'),
+            $item = $intro.find('.item');
+            $item.addClass('active');
+
+        $item.find('svg').drawsvg().drawsvg('animate');
+
+        let myVar = setTimeout(myFunction, 10000);
+
+        function myFunction() {
+            $item.removeClass('active');
+            $info.removeClass('inactive');
+            $info.addClass('active');
+        }
+    }
+
+
     window.onscroll = function () { myFunction() };
 
     var navbar = document.getElementById("navbar");

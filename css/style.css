@@ -123,21 +123,68 @@ nav.grid {
 /*
  * --- RESUME CONTENT STYLES ---
  */
-.content {
+.content.grid {
   padding: 0 2em;
 
+  grid-template-rows: 1fr;
   grid-template-columns: auto 1fr;
   color: white;
 }
 
 .timeline {
+  grid-row: 1/2;
+  grid-column: 1/2;
   height: 1600px;
   border-left: 1px solid #b5b7bb;
 }
 
-.resume {
+.resume-skills.grid {
+  grid-row: 1/2;
+  grid-column: 2/3;
+
+  margin-top: 4em;
+}
+
+
+.resume.grid {
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0.5em;
+}
+
+.year{
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  font-size: 1.4em;
+}
+
+.separator{
+  grid-row: 2/3;
+  grid-column: 1/2;
+
+  border-top: 1px solid #b5b7bb;
+}
+
+.city {
+  grid-row: 3/4;
+  grid-column: 1/2;
+
+  font-size: 1.4em;
+}
+
+.profession {
+  grid-row: 1/2;
+  grid-column: 2/3;
+
+  font-size: 1.6em;
+}
+
+.company {
+  grid-row: 3/4;
+  grid-column: 2/3;
+
+  font-size: 1.6em;
 }
 
 /*

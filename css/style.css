@@ -21,6 +21,10 @@ body {
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
 .line {
   width: 100%;
   border-bottom: 2px solid #b5b7bb;
@@ -120,6 +124,11 @@ nav.grid {
   color: #fffff0;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: #ff6666;
+}
+
 /*
  * --- RESUME CONTENT STYLES ---
  */
@@ -128,13 +137,13 @@ nav.grid {
 
   grid-template-rows: 1fr;
   grid-template-columns: auto 1fr;
-  color: white;
+  color: #FFFFF0;
 }
 
 .timeline {
   grid-row: 1/2;
   grid-column: 1/2;
-  height: 1600px;
+  height: 1820px;
   border-left: 1px solid #b5b7bb;
 }
 
@@ -146,26 +155,48 @@ nav.grid {
 
   grid-gap: 4em;
   margin-top: 8em;
-
 }
 
-.resume.grid {
+.resume.grid.past {
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 2em;
+}
+
+.resume.grid.current,
+.resume.grid.past div.grid {
   grid-template-rows: auto auto 1fr;
   grid-template-columns: 1fr 2fr;
   grid-gap: 0.5em;
 }
 
+.past{
+  color: #D8D8D8;
+}
+
+.resume.grid.past ul li {
+  margin: 0 0 0 2.5em;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.resume.grid.past ul.grid {
+  grid-gap: 1em;
+}
+
 .year,
 .city,
 .profession,
-.company {
-  font-size: 1.4em;
+.company,
+.skills {
+  font-size: 1.3em;
   margin-left: 1em;
 }
 
 .year{
   grid-row: 1/2;
   grid-column: 1/2;
+
+  align-self: end;
 }
 
 .separator{
@@ -183,6 +214,8 @@ nav.grid {
 .profession {
   grid-row: 1/2;
   grid-column: 2/3;
+
+  font-style: italic;
 }
 
 .company {
@@ -191,15 +224,12 @@ nav.grid {
 }
 
 .portfolio.grid {
-  grid-template-rows: auto auto auto;
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
-  grid-gap: 1em;
-
-  height: 25em;
+  grid-gap: 1.3em;
 }
 
 .portfolio-image {
-  /* width: 8em; */
   height: 6em;
 }
 
@@ -223,14 +253,35 @@ nav.grid {
   justify-items: center; 
 }
 
+.skills{
+  border: 1px solid #FDE4E5;
+  border-radius: 1.5em;
+  padding: 1em 1em 1.5em 1em;
+  letter-spacing: 1px;
+}
+
+.skills p{
+  margin: 0.4em 1em;
+}
+
+.skill-category {
+  margin: 0.5em 1em 1em 1em;
+  font-size: 1.3em;
+}
+
+.skill-group-title {
+  margin: 1.5em 1em 0.8em 1em;
+  font-size: 1.2em;
+}
+
 /*
  * --- CONTACT FORM STYLES ---
  */
 #contact-form {
-  grid-template-rows: repeat(1fr);
-  grid-gap: 2em;
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 1em;
 
-  margin: 3em 2em;
+  margin: 8em 2em;
   text-align: center;
 
   color: #fffff0;
@@ -241,17 +292,39 @@ nav.grid {
   text-decoration: none;
 }
 
-#contact-form a,
-#phone-number,
-.input-textbox {
+#email.flex,
+#phone-number.flex {
   font-size: 1.6em;
+  justify-self: center;
+  column-gap: 1em;
 }
 
-.input-textbox {
-  color: #707070;
-  border: 1px solid #707070;
+.input-textbox,
+.input-textarea {
+  color: #C0BFC5;
+  border: 1px solid #C0BFC5;
+  border-radius: 15px;
+  font-size: 1.4em;
   padding: 0.5em;
+  margin-bottom: 1em;
 }
+
+.input-textarea {
+  height: 10em;
+}
+
+button {
+  background-color: #1f1949;
+  border: 1px solid #C0BFC5;
+  border-radius: 15px;
+  color: #fffff0;
+  height: 3em;
+}
+
+button:hover {
+  background-color: #ff6666;
+}
+
 
 /*
  * --- FOOTER STYLES ---
@@ -327,7 +400,39 @@ footer.grid {
     font-size: 2.5em;
     color: #ff6666;
   }
-}
+
+  #navigation{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    right: -450px;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(255, 232, 234, 0.95);
+
+    z-index: 1;
+
+    padding-top: 30em;
+  }
+
+  #navigation:target{
+    transform: translateX(-450px);
+  }
+
+  #navigation li a.toggle.close{
+    font-size: 2em;
+    margin-top: 40em;
+  }
+
+  #navigation li a.toggle.close i {
+    padding-top: 1em;
+  }
+
+  #navigation li {
+    padding: 0 2em 2em 0;
+    font-size: 1.8em;
+  }
+
 
 /*
  * ─── 425PX AND UP STYLES ────────────────────────────────────────────────────────

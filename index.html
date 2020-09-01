@@ -156,10 +156,21 @@
                 </div>
 
                 <a class="toggle open" href="#navigation"><i class="fas fa-bars"></i></a>
+                <ul id="navigation">
+                    <ul>
+                        <li><a href="#about-me">About Me</a></li>
+                        <li><a href="#top">Portfolio</a></li>
+                        <li><a href="#contact-form">Get In Touch</a></li>
+                        <li>
+                            <a href="./images/Iris_Cheng_Resume.jpg" download="Iris_Cheng_Resume.jpg"
+                                title="Resume Download" target="_blank">
+                                Resume <i class="fas fa-download"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-                <!-- <ul id="navigation">
                     <li><a class="toggle close" href="#"><i class="fas fa-times"></i></a></li>
-                </ul> -->
+                </ul>
             </nav>
 
             <div class="line"></div>
@@ -170,7 +181,7 @@
             <div class="timeline"></div>
 
             <section class="resume-skills grid">
-                <section class="resume grid">
+                <section class="resume grid current">
                     <p class="year">2019-2020</p>
                     <p class="separator"></p>
                     <p class="city">San Diego, CA</p>
@@ -209,27 +220,95 @@
                     </div>
                 </section>
 
-                <section class="skills grid"></section>
+                <section class="skills">
+                    <div class="skill-category">Design / Development Skills</div>
 
-                <section class="resume grid">
-                    <p class="year">2013-2016</p>
-                    <p class="separator"></p>
-                    <p class="city">Beijing, China</p>
-                    <p class="profession">Field Engineer & Marketing</p>
-                    <p class="company">Westar Display Technologies, Inc.</p>
+                    <div class="skill-group-title">Design</div>
+                    <p>User Experience</p>
+                    <p>Responsive Design</p>
+                    <p>Branding</p>
+                    <p>Typography</p>
+                    <p>Wireframes</p>
+                    <p>Mock-ups</p>
+                    <p>Image Manipulation</p>
+                    <p>Color Theory</p>
+
+                    <div class="skill-group-title">Software</div>
+                    <p>Adobe Photoshop</p>
+                    <p>Adobe Illustrator</p>
+                    <p>Adobe XD</p>
+                    <p>Adobe InDesign</p>
+                    <p>Adobe Lightroom</p>
+
+                    <div class="skill-group-title">Programming</div>
+                    <p>HTML5</p>
+                    <p>CSS3</p>
+                    <p>Javascript/ES6</p>
+                    <p>jQuery</p>
+                    <p>Bootstrap</p>
+                    <p>React</p>
+                    <p>Node.js</p>
+                    <p>MySQL</p>
+                    <p>MongoDB</p>
+                    <p>Responsive Frameworks</p>
+                    <p>Wordpress</p>
+                    <p>SEO Optimization</p>
+
                 </section>
 
-                <section class="resume grid">
-                    <p class="year">2001-2013</p>
-                    <p class="separator"></p>
-                    <p class="city">St. Charles, MO</p>
-                    <p class="profession">
-                        Electrical/Software Engineer & Customer Support
-                    </p>
-                    <p class="company">Westar Display Technologies, Inc.</p>
+                <section class="resume grid past">
+                    <div class="grid">
+                        <p class="year">2013-2016</p>
+                        <p class="separator"></p>
+                        <p class="city">Beijing, China</p>
+                        <p class="profession">Field Engineer & Marketing</p>
+                        <p class="company">Westar Display Technologies, Inc.</p>
+                    </div>
+
+                    <ul class="grid">
+                        <li>Directing Asia support team to providing technical support for over 30 customers</li>
+                        <li>Troubleshooting and enhancing more than 100 display optical measurement systems in Asia</li>
+                    </ul>
+
                 </section>
 
-                <section class="skills grid"></section>
+                <section class="resume grid past">
+                    <div class="grid">
+                        <p class="year">2001-2013</p>
+                        <p class="separator"></p>
+                        <p class="city">St. Charles, MO</p>
+                        <p class="profession">
+                            Electrical/Software Engineer & Customer Support
+                        </p>
+                        <p class="company">Westar Display Technologies, Inc.</p>
+                    </div>
+
+                    <ul class="grid">
+                        <li>Software development for system integration as well as Computer vision and Image Processing
+                            algorithm development of defect detection using VB .NET/C#/C/C++</li>
+                        <li>Troubleshooting and Customer Support worldwide</li>
+                    </ul>
+                </section>
+
+                <section class="skills">
+                    <div class="skill-category">Other Skills</div>
+
+                    <div class="skill-group-title">Software</div>
+                    <p>Microsoft Office</p>
+                    <p>Sales Force</p>
+                    <p>Github</p>
+                    <p>JIRA</p>
+
+                    <div class="skill-group-title">Programming</div>
+                    <p>VB .NET</p>
+                    <p>C#</p>
+                    <p>C/C++</p>
+
+                    <div class="skill-group-title">Misclleous</div>
+                    <p>Bilingual/Chinese</p>
+                    <p>Project Management</p>
+
+                </section>
             </section>
         </section>
 
@@ -237,17 +316,21 @@
         <section id="contact-form" class="grid">
             <h3>GET IN TOUCH</h3>
 
-            <a class="email" href="mailto:chengiris66@gmail.com">
+            <a id="email" class="flex" href="mailto:chengiris66@gmail.com">
                 <i class="fas fa-envelope"></i>
                 <p>chengiris66@gmail.com</p>
             </a>
 
-            <p id="phone-number"><i class="fas fa-phone-alt"></i>858.221.3080</p>
+            <p id="phone-number" class="flex"><i class="fas fa-phone-alt"></i>858.221.3080</p>
 
-            <p class="input-textbox">Name</p>
-            <p class="input-textbox">Email address</p>
-            <p class="input-textbox">Subject</p>
-            <p class="input-textarea">Leave a message</p>
+            <div class="form grid">
+                <p class="input-textbox">Name</p>
+                <p class="input-textbox">Email address</p>
+                <p class="input-textbox">Subject</p>
+                <p class="input-textarea">Leave a message</p>
+                <button type="submit">Send</button>
+            </div>
+            
         </section>
 
         <!-- Footer -->
@@ -262,7 +345,8 @@
                 <a href="#about-me">About Me</a>
                 <a href="#top">Portfolio</a>
                 <a href="#contact-form">Get In Touch</a>
-                <a href="./images/Iris_Cheng_Resume.jpg" download="Iris_Cheng_Resume.jpg" title="Resume Download">
+                <a href="./images/Iris_Cheng_Resume.jpg" download="Iris_Cheng_Resume.jpg" title="Resume Download"
+                    target="_blank">
                     <i class="fas fa-download"></i>
                 </a>
             </div>

@@ -432,7 +432,7 @@ footer.grid {
     padding: 0 2em 2em 0;
     font-size: 1.8em;
   }
-
+}
 
 /*
  * ─── 425PX AND UP STYLES ────────────────────────────────────────────────────────
@@ -444,12 +444,16 @@ footer.grid {
  * ─── 768PX AND UP STYLES ────────────────────────────────────────────────────────
  */
 @media screen and (min-width: 768px) {
+  nav.grid {
+    text-align: start;
+  }
+  
   nav img {
     max-width: 25em;
     justify-self: left;
   }
 
-  nav.grid .grid {
+  nav.grid {
     display: flex;
     align-items: center;
   }
@@ -465,4 +469,14 @@ footer.grid {
  * ─── 1440PX AND UP STYLES ────────────────────────────────────────────────────────
  */
 @media screen and (min-width: 1440px) {
+  /* header {
+    height: 1300px;
+  }
+
+  .toggle.open,
+  #navigation {
+    display: none;
+  }
+   */
+
 }

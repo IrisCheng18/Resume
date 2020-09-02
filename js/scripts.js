@@ -14,55 +14,55 @@ $(function () {
     //     ctx.stroke();
     // }
 
-    let $container=$('.container');
-    $container.addClass('inactive');
+    // let $container=$('.container');
+    // $container.addClass('inactive');
 
-    new TypeIt("#quotes", {
-        speed: 100,
-        waitUntilVisible: true,
-        loop: false,
-        afterComplete: function () {
-            console.log("DONE!");
-        }
-    })
-        .type("There is no difference between science and art when it comes to ", { delay: 2000 })
-        .break({ delay: 1000 })
-        .type("creativeness,", { delay: 2000 })
-        // .options({ speed: 500, delay: 2000 })
-        .type(" productiveness,", { delay: 2000 })
-        .type(" to conclusions", { delay: 2000 })
-        .type(" and to formulations.", { delay: 2000 })
-        .exec(
-            function () {
-                console.log("fire!");
-            },
-            { delay: 2000 }
-        )
-        .go();
+    // new TypeIt("#quotes", {
+    //     speed: 100,
+    //     waitUntilVisible: true,
+    //     loop: false,
+    //     afterComplete: function () {
+    //         console.log("DONE!");
+    //     }
+    // })
+    //     .type("There is no difference between science and art when it comes to ", { delay: 2000 })
+    //     .break({ delay: 1000 })
+    //     .type("creativeness,", { delay: 2000 })
+    //     // .options({ speed: 500, delay: 2000 })
+    //     .type(" productiveness,", { delay: 2000 })
+    //     .type(" to conclusions", { delay: 2000 })
+    //     .type(" and to formulations.", { delay: 2000 })
+    //     .exec(
+    //         function () {
+    //             console.log("fire!");
+    //         },
+    //         { delay: 2000 }
+    //     )
+    //     .go();
 
-    setTimeout(drawLogo, 20000);
+    // setTimeout(drawLogo, 27000);
 
-    function drawLogo() {
-        let $info = $('.info');
-        $info.addClass('dim');
+    // function drawLogo() {
+    //     let $info = $('.info');
+    //     $info.addClass('dim');
 
-        let $intro = $('.intro'),
-            $item = $intro.find('.item');
-            $item.addClass('active');
+    //     let $intro = $('.intro'),
+    //         $item = $intro.find('.item');
+    //         $item.addClass('active');
 
-        $item.find('svg').drawsvg().drawsvg('animate');
+    //     $item.find('svg').drawsvg().drawsvg('animate');
 
-        setTimeout(myFunction, 12000);
+    //     setTimeout(myFunction, 14000);
 
-        function myFunction() {
-            $item.removeClass('active');
+    //     function myFunction() {
+    //         $item.removeClass('active');
 
-            $info.removeClass('dim');
-            $info.addClass('active');
+    //         $info.removeClass('dim');
+    //         $info.addClass('active');
 
-            $container.removeClass('inactive');
-        }
-    }
+    //         $container.removeClass('inactive');
+    //     }
+    // }
 
     window.onscroll = function () { myFunction() };
 

@@ -220,7 +220,7 @@
                     </div>
                 </section>
 
-                <section class="skills">
+                <section class="skills first">
                     <div class="skill-category">Design / Development Skills</div>
 
                     <div class="skill-group-title">Design</div>
@@ -256,7 +256,7 @@
 
                 </section>
 
-                <section class="resume grid past">
+                <section class="resume grid past one">
                     <div class="grid">
                         <p class="year">2013-2016</p>
                         <p class="separator"></p>
@@ -272,7 +272,7 @@
 
                 </section>
 
-                <section class="resume grid past">
+                <section class="resume grid past two">
                     <div class="grid">
                         <p class="year">2001-2013</p>
                         <p class="separator"></p>
@@ -290,7 +290,7 @@
                     </ul>
                 </section>
 
-                <section class="skills">
+                <section class="skills second">
                     <div class="skill-category">Other Skills</div>
 
                     <div class="skill-group-title">Software</div>
@@ -323,13 +323,31 @@
 
             <p id="phone-number" class="flex"><i class="fas fa-phone-alt"></i>858.221.3080</p>
 
-            <div class="form grid">
+            <!-- <div class="form grid">
                 <p class="input-textbox">Name</p>
                 <p class="input-textbox">Email address</p>
                 <p class="input-textbox">Subject</p>
                 <p class="input-textarea">Leave a message</p>
                 <button type="submit">Send</button>
-            </div>
+            </div> -->
+
+            <form action="./contactForm.php" method="POST" id="contactform">
+                <div class="form-group">
+                    <label for="userName">Enter Name:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Put Your Name Here">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Enter Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Put Your Email Here">
+                </div>
+                <div class="form-group">
+                    <label for="userMessage">Enter Message:</label>
+                    <textarea name="userMessage" id="userMessage" cols="30" rows="10"></textarea>
+                </div>
+                <!-- either button is good -->
+                <!-- <button type="submit">Send</button>  -->
+                <input type="submit" value="Send">
+            </form>
             
         </section>
 
@@ -359,13 +377,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- JQuery DrawSVG -->
-    <script src="https://cdn.jsdelivr.net/g/jquery@1.11.3,jquery.easing@1.3(jquery.easing.1.3.min.js)"></script>
     <script src="./js/jquery.drawsvg.min.js"></script>
 
     <!-- JQuery typeit -->
     <script
         src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.fill%2CIntersectionObserver%2CObject.assign%2CPromise%2CArray.from%2CArray.prototype.find%2CMath.sign"></script>
     <script src="./js/typeit.min.js"></script>
+
+    <!-- Validate -->
+    <script src="./validate.min.js"></script>
 
     <script src="./js/scripts.js"></script>
 </body>

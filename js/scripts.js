@@ -14,55 +14,63 @@ $(function () {
     //     ctx.stroke();
     // }
 
-    // let $container=$('.container');
-    // $container.addClass('inactive');
+    /////////////////////
+    // Header animation
+    /////////////////////
 
-    // new TypeIt("#quotes", {
-    //     speed: 100,
-    //     waitUntilVisible: true,
-    //     loop: false,
-    //     afterComplete: function () {
-    //         console.log("DONE!");
-    //     }
-    // })
-    //     .type("There is no difference between science and art when it comes to ", { delay: 2000 })
-    //     .break({ delay: 1000 })
-    //     .type("creativeness,", { delay: 2000 })
-    //     // .options({ speed: 500, delay: 2000 })
-    //     .type(" productiveness,", { delay: 2000 })
-    //     .type(" to conclusions", { delay: 2000 })
-    //     .type(" and to formulations.", { delay: 2000 })
-    //     .exec(
-    //         function () {
-    //             console.log("fire!");
-    //         },
-    //         { delay: 2000 }
-    //     )
-    //     .go();
+    let $container=$('.container');
+    $container.addClass('inactive');
 
-    // setTimeout(drawLogo, 27000);
+    new TypeIt("#quotes", {
+        speed: 100,
+        waitUntilVisible: true,
+        loop: false,
+        afterComplete: function () {
+            console.log("DONE!");
+        }
+    })
+        .type("There is no difference between science and art when it comes to ", { delay: 2000 })
+        .break({ delay: 1000 })
+        .type("creativeness,", { delay: 2000 })
+        // .options({ speed: 500, delay: 2000 })
+        .type(" productiveness,", { delay: 2000 })
+        .type(" to conclusions", { delay: 2000 })
+        .type(" and to formulations.", { delay: 2000 })
+        .exec(
+            function () {
+                console.log("fire!");
+            },
+            { delay: 2000 }
+        )
+        .go();
 
-    // function drawLogo() {
-    //     let $info = $('.info');
-    //     $info.addClass('dim');
+    setTimeout(drawLogo, 27000);
 
-    //     let $intro = $('.intro'),
-    //         $item = $intro.find('.item');
-    //         $item.addClass('active');
+    function drawLogo() {
+        let $info = $('.info');
+        $info.addClass('dim');
 
-    //     $item.find('svg').drawsvg().drawsvg('animate');
+        let $intro = $('.intro'),
+            $item = $intro.find('.item');
+            $item.addClass('active');
 
-    //     setTimeout(myFunction, 14000);
+        $item.find('svg').drawsvg().drawsvg('animate');
 
-    //     function myFunction() {
-    //         $item.removeClass('active');
+        setTimeout(myFunction, 14000);
 
-    //         $info.removeClass('dim');
-    //         $info.addClass('active');
+        function myFunction() {
+            $item.removeClass('active');
 
-    //         $container.removeClass('inactive');
-    //     }
-    // }
+            $info.removeClass('dim');
+            $info.addClass('active');
+
+            $container.removeClass('inactive');
+        }
+    }
+
+    ///////////////////
+    // Sticky Navbar
+    ///////////////////
 
     window.onscroll = function () { myFunction() };
 
@@ -77,5 +85,42 @@ $(function () {
         }
     }
 
+    ///////////////////
+    // Contact Form
+    ///////////////////
+
+    const constraints = {
+        userName: {
+            presence: { allowEmpty: false },
+        },
+        userEmail: {
+            presence: { allowEmpty: false },
+            email: true,
+        },
+        userMessage: {
+            presence: { allowEmpty: false },
+        },
+    };
+    
+    const form = document.getElementById("contactform");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    
+        const formValues = {
+            userName: form.elements.userName.value,
+            userEmail: form.elements.userEmail.value,
+            userMessage: form.elements.userMessage.value,
+        };
+    
+        // console.log(validate(formValues, constraints));
+        const errors = validate(formValues, constraints);
+    
+        if(errors) {
+            console.log(errors);
+        } else {
+            console.log("success");
+        }
+    });
 
 });

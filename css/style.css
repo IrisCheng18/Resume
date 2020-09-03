@@ -542,42 +542,42 @@ footer.grid {
     grid-row: 1/2;
     grid-column: 1/2;
   }
-  
+
   .portfolio-image.image2 {
     grid-row: 1/2;
     grid-column: 2/3;
   }
-  
+
   .portfolio-image.image3 {
     grid-row: 2/3;
     grid-column: 1/2;
   }
-  
+
   .portfolio-image.image4 {
     grid-row: 2/3;
     grid-column: 2/3;
   }
-  
+
   .portfolio-image.image5 {
     grid-row: 3/4;
     grid-column: 1/2;
   }
-  
+
   .portfolio-image.image6 {
     grid-row: 3/4;
     grid-column: 2/3;
   }
-  
+
   .portfolio-image.image7 {
     grid-row: 4/5;
     grid-column: 1/2;
   }
-  
+
   .portfolio-image.image8 {
     grid-row: 4/5;
     grid-column: 2/3;
   }
- 
+
   .resume-skills.grid {
     grid-column: 1/3;
 
@@ -615,7 +615,7 @@ footer.grid {
   }
 
   .resume.grid.past div.grid {
-    grid-template-columns: 2fr 1fr ;
+    grid-template-columns: 2fr 1fr;
   }
 
   .resume.grid.past div.grid .year,
@@ -685,10 +685,33 @@ footer.grid {
  */
 @media screen and (min-width: 1024px) {
   /*
+  * --- NAV BAR STYLES ---
+  */
+  nav.grid {
+    margin: 2em 4em;
+  }
+
+  nav.grid div.grid {
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 4fr 1fr;
+  }
+
+  nav.grid div.grid img {
+    grid-column: 1/2;
+
+    padding-top: 2em;
+    /* max-width: 18em; */
+  }
+
+  nav.grid div.grid p {
+    grid-column: 2/3;
+
+    margin: auto;
+  }
+
+  /*
   * --- CONTACT FORM STYLES ---
   */
-  
-
 }
 
 /*

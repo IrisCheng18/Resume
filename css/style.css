@@ -700,7 +700,7 @@ footer.grid {
     font-size: 1.4em;
   }
 
-    /*
+  /*
   * --- FOOTER STYLES ---
   */
   footer.grid {
@@ -723,9 +723,10 @@ footer.grid {
     max-width: 18em;
   }
 
-  #title, #navigation ul li {
+  #title,
+  #navigation ul li {
     font-size: 1.8em;
-}
+  }
 
   nav.grid div.grid {
     grid-template-rows: 1fr;
@@ -860,7 +861,7 @@ footer.grid {
     grid-column: 2/3;
   }
 
-      /*
+  /*
   * --- FOOTER STYLES ---
   */
   footer.grid {
@@ -872,4 +873,94 @@ footer.grid {
  * ─── 1440PX AND UP STYLES ────────────────────────────────────────────────────────
  */
 @media screen and (min-width: 1440px) {
+  /*
+  * --- NAV BAR STYLES ---
+  */
+  nav.grid {
+    margin: 2em 4em;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav img {
+    max-width: 25em;
+  }
+
+  nav.grid div.grid {
+    grid-template-columns: 3fr 4fr;
+  }
+
+  #navigation {
+    text-align: end;
+  }
+
+  #navigation ul {
+    margin: auto 3em;
+  }
+
+  #title,
+  #navigation ul li {
+    font-size: 2.2em;
+  }
+
+  nav.grid div.grid p {
+    margin: auto 0;
+  }
+
+  /*
+  * --- RESUME CONTENT STYLES ---
+  */
+  .timeline {
+    height: 147em;
+  }
+
+  .year,
+  .city,
+  .profession,
+  .company,
+  .skills {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
+  .resume.grid.current p.separator {
+    margin-left: -2.5em;
+  }
+
+  .resume.grid.past p.separator {
+    margin-right: -2.5em;
+  }
+
+  .resume.grid.past ul li {
+    font-size: 1.8em;
+  }
+
+  .portfolio-image {
+    height: 15em;
+  }
+
+  .portfolio.grid {
+    grid-gap: 2.5em;
+}
+
+  /*
+  * --- CONTACT FORM STYLES ---
+  */
+  #email.flex,
+  #phone-number.flex {
+    font-size: 2.4em;
+  }
+
+  .input-textbox,
+  .input-textarea,
+  .btn {
+    font-size: 2em;
+  }
+
+  /*
+  * --- FOOTER STYLES ---
+  */
+  footer.grid {
+    font-size: 2em;
+  }
 }

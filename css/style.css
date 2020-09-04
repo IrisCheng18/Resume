@@ -916,6 +916,10 @@ footer.grid {
   /*
   * --- RESUME CONTENT STYLES ---
   */
+
+  .resume-skills.grid {
+    margin-top: 16em;
+  }
   .timeline {
     height: 147em;
   }

@@ -69,7 +69,9 @@ header {
   align-items: center;
 
   color: #f7f0ff;
-  margin: 1.2em;
+  margin: auto 1.2em;
+
+  height: 83%;
 }
 
 header i {
@@ -100,6 +102,10 @@ header .item {
 
 header .item.active {
   opacity: 1;
+}
+
+header .info.grid {
+  width: 100%;
 }
 
 /*
@@ -941,7 +947,7 @@ footer.grid {
 
   .portfolio.grid {
     grid-gap: 2.5em;
-}
+  }
 
   /*
   * --- CONTACT FORM STYLES ---
